@@ -1,0 +1,317 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting page</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/setting.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo__btn__msg">
+                <a href="#" class="logo">
+                    <span class="logo__letter">T</span>
+                    TableTrack
+                </a>
+                <div class="btn__msg">
+                    <a href="#">Today Orders <span class="active__total">5</span></a>
+                    <a href="#">New Reservations <span class="active__total">1</span></a>
+                </div>
+            </div>
+
+            <div class="action__btn">
+                <div class="menu__bar" id="toggle-menu-bar">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="1.5">
+                        <path d="M10 6h10"></path>
+                        <path d="M4 12h16"></path>
+                        <path d="M7 12h13"></path>
+                        <path d="M4 18h10"></path>
+                    </svg>
+                </div>
+
+                <span class="toggle__mode">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="1.5">
+                        <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+                    </svg>
+                </span>
+
+                <div class="acc">
+                    <span>JD</span>
+                </div>
+
+                <div class="dropdown__wrapper">
+                    <span class="toggle__show__dropdown">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="1.5">
+                            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                            <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                            <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                        </svg>
+                    </span>
+                    <div class="dropdown__menu">
+                        <div class="btn__msg">
+                            <a href="#">Today Orders <span class="active__total">5</span></a>
+                            <a href="#">New
+                                Reservations <span class="active__total">1</span></a>
+                        </div>
+                        <a href="#" class="dropdown__item">Toggle Dark Mode</a>
+                        <a href="#" class="dropdown__item">Account (JD)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="asidebar">
+            <ul class="list__links">
+                <li class="list active">
+                    <a class="link" href="./dashboard.html">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" width="18" height="18" stroke-width="2">
+                            <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+                            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+                            <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
+                        </svg> Dashboard
+                    </a>
+                </li>
+                <li class="list">
+                    <a class="link" href="#" onclick="toggleSubMenu(event)" aria-expanded="false" aria-controls="submenu">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" width="18" height="18" stroke-width="1.5">
+                            <path d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12zm0 12v6h-1v-3m-10 -14v17m-3 -17v3a3 3 0 1 0 6 0v-3">
+                            </path>
+                        </svg> Menu
+                        <svg class="arrow__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"
+                            stroke-width="1.5">
+                            <path d="M17 13v-6l-5 4l-5 -4v6l5 4z"></path>
+                        </svg>
+                    </a>
+                    <ul class="sub__list__links">
+                        <li class="sub__list">
+                            <a href="./pos.html" class="sub__link">KOT</a>
+                        </li>
+                        <li class="sub__list">
+                            <a href="#" class="sub__link">Orders</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list">
+                    <a class="link" href="#" onclick="toggleSubMenu(event)" aria-expanded="false" aria-controls="submenu">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" width="18" height="18" stroke-width="1.5">
+                            <path d="M16 7l2 9m-10 -9l-2 9m-1 -9h14m2 5h-18"></path>
+                        </svg> Table
+                        <svg class="arrow__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"
+                            stroke-width="1.5">
+                            <path d="M17 13v-6l-5 4l-5 -4v6l5 4z"></path>
+                        </svg>
+                    </a>
+                    <ul class="sub__list__links">
+                        <li class="sub__list">
+                            <a href="#" class="sub__link">Table 1</a>
+                        </li>
+                        <li class="sub__list">
+                            <a href="#" class="sub__link">Table 2</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list">
+                    <a class="link" href="#">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" width="18" height="18" stroke-width="1.5">
+                            <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
+                            <path d="M16 3v4"></path>
+                            <path d="M8 3v4"></path>
+                            <path d="M4 11h16"></path>
+                            <path d="M8 14v4"></path>
+                            <path d="M12 14v4"></path>
+                            <path d="M16 14v4"></path>
+                        </svg>
+                        Reservations
+                    </a>
+                </li>
+                <li class="list">
+                    <a class="link" href="./pos.html">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" width="18" height="18" stroke-width="1.5">
+                            <path d="M4 3m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                            <path d="M8 7m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z"></path>
+                            <path d="M8 14l0 .01"></path>
+                            <path d="M12 14l0 .01"></path>
+                            <path d="M16 14l0 .01"></path>
+                            <path d="M8 17l0 .01"></path>
+                            <path d="M12 17l0 .01"></path>
+                            <path d="M16 17l0 .01"></path>
+                        </svg> POs
+                    </a>
+                </li>
+                <li class="list">
+                    <a class="link" href="#">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" width="18" height="18" stroke-width="1.5">
+                            <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                            <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
+                        </svg>
+                        Customers
+                    </a>
+                </li>
+                <li class="list">
+                    <a class="link" href="#">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" width="18" height="18" stroke-width="1.5">
+                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                        </svg> Staff
+                    </a>
+                </li>
+                <li class="list">
+                    <a class="link" href="#" onclick="toggleSubMenu(event)" aria-expanded="false" aria-controls="submenu">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" width="18" height="18" stroke-width="1.5">
+                            <path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"></path>
+                            <path d="M3 10l18 0"></path>
+                            <path d="M7 15l.01 0"></path>
+                            <path d="M11 15l2 0"></path>
+                        </svg> Payment
+                        <svg class="arrow__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"
+                            stroke-width="1.5">
+                            <path d="M17 13v-6l-5 4l-5 -4v6l5 4z"></path>
+                        </svg>
+                    </a>
+                    <ul class="sub__list__links">
+                        <li class="sub__list">
+                            <a href="#" class="sub__link">Cash</a>
+                        </li>
+                        <li class="sub__list">
+                            <a href="#" class="sub__link">Payment Method</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list">
+                    <a class="link" href="#" onclick="toggleSubMenu(event)" aria-expanded="false" aria-controls="submenu">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" width="18" height="18" stroke-width="1.5">
+                            <path d="M7 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                            <path d="M7 3v4h4"></path>
+                            <path d="M9 17l0 4"></path>
+                            <path d="M17 14l0 7"></path>
+                            <path d="M13 13l0 8"></path>
+                            <path d="M21 12l0 9"></path>
+                        </svg> Reports
+                        <svg class="arrow__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"
+                            stroke-width="1.5">
+                            <path d="M17 13v-6l-5 4l-5 -4v6l5 4z"></path>
+                        </svg>
+                    </a>
+                    <ul class="sub__list__links">
+                        <li class="sub__list">
+                            <a href="#" class="sub__link">POs Report</a>
+                        </li>
+                        <li class="sub__list">
+                            <a href="#" class="sub__link">Product Report</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list">
+                    <a class="link" href="./setting.html">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" width="18" height="18" stroke-width="1.5">
+                            <path
+                                d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z">
+                            </path>
+                            <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                        </svg> Setting
+                    </a>
+                </li>
+            </ul>
+            <a href="#" class="customer__site">
+                <span>Customers Site</span>
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"
+                    stroke-width="1.5">
+                    <path d="M8 9h-1a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-8a2 2 0 0 0 -2 -2h-1"></path>
+                    <path d="M12 14v-11"></path>
+                    <path d="M9 6l3 -3l3 3"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="section__setting">
+            <div class="settings">
+                <div class="tab__informations">
+                    <a href="#" class="info">Restaurant information</a>
+                    <a href="#" class="info">App setting</a>
+                    <a href="#" class="info">Branch setting</a>
+                    <a href="#" class="info">Currencise</a>
+                    <a href="#" class="info">Email setting</a>
+                    <a href="#" class="info">Taxes</a>
+                    <a href="#" class="info">Payment Getway</a>
+                    <a href="#" class="info">Theme setting</a>
+                </div>
+                <div class="tab__showing">
+                    <button class="showing">Staff</button>
+                    <button class="showing">Reservations</button>
+                </div>
+                <div class="a__week">
+                    <button type="button" class="btn__week active">Monday</button>
+                    <button type="button" class="btn__week">Tueday</button>
+                    <button type="button" class="btn__week">Wednesday</button>
+                    <button type="button" class="btn__week">Thursday</button>
+                    <button type="button" class="btn__week">Friday</button>
+                    <button type="button" class="btn__week">Saturday</button>
+                    <button type="button" class="btn__week">Sunday</button>
+                </div>
+                <h2 class="title">Monday</h2>
+                <div class="table-wrapper"></div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Slot Type</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                            <th>Time Slot Difference</th>
+                            <th>Available</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Breakfast</td>
+                            <td><input class="input__data" type="text" value="08:00"></td>
+                            <td><input class="input__data" type="text" value="11:00"></td>
+                            <td><input class="input__date" type="text" value="30 Minutes"></td>
+                            <td><input class="input__data" type="checkbox" checked></td>
+                        </tr>
+                        <tr>
+                            <td>Lunch</td>
+                            <td><input class="input__data" type="text" value="12:00"></td>
+                            <td><input class="input__data" type="text" value="17:00"></td>
+                            <td><input class="input__date" type="text" value="60 Minutes"></td>
+                            <td><input class="input__data" type="checkbox" checked></td>
+                        </tr>
+                        <tr>
+                            <td>Dinner</td>
+                            <td><input class="input__data" type="text" value="18:00"></td>
+                            <td><input class="input__data" type="text" value="22:00"></td>
+                            <td><input class="input__date" type="text" value="60 Minutes"></td>
+                            <td><input class="input__data" type="checkbox" checked></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+                <button class="btn__save">Save</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../scripts/main.js"></script>
+
+</html>
